@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) {
+		System.out.println("CONVERSIONE DECIMALE-ESADECIMALE");
+		Scanner in=new Scanner(System.in);
+		int num;
+		System.out.println("inserisci il numero da convertire: ");
+		num=in.nextInt();
+		Conversione c=new Conversione();
+		c.Convert(num);
+		c.Stampa();
+		c.clear();
+	}
+
+}

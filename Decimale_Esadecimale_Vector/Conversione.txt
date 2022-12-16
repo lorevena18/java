@@ -1,0 +1,62 @@
+import java.util.Vector;
+
+
+public class Conversione {
+	private Vector v;
+	
+	
+	public  Conversione () {
+		v =new Vector ();
+	}
+	
+	public void Convert(int n) {
+		int x;
+		while(n!=0) {
+				x=n%16;
+				n=n/16;
+				if(x>9) {
+					switch(x) {
+					case 10:
+						v.add('A');
+						break;
+					case 11:
+						v.add('B');
+						break;
+					case 12:
+						v.add('C');
+						break;
+					case 13:
+						v.add('D');
+						break;
+					case 14:
+						v.add('E');
+						break;
+					case 15:
+						v.add('F');
+						break;
+					
+					}
+				}
+				else {
+					v.add(x);
+				}
+				
+		}
+		
+		
+		
+	}
+	
+	public void Stampa() {
+		for(int j=v.size()-1;j>=0;j--) {
+			System.out.print(v.get(j));
+			
+		}
+		System.out.println("");
+		System.out.println("FINE NUMERO BINARIO");
+	}
+	
+	public void clear() {
+		v.clear();
+	}
+}
